@@ -1,3 +1,5 @@
+# vim: filetype=sh
+
 source /opt/boxen/env.sh
 
 export GREP_OPTIONS="--color=auto"
@@ -6,8 +8,8 @@ export CLICOLOR="auto"
 
 export EDITOR='vim'
 
-source /opt/boxen/homebrew/Cellar/git/2.5.1/etc/bash_completion.d/git-completion.bash
-source /opt/boxen/homebrew/Cellar/git/2.5.1/etc/bash_completion.d/git-prompt.sh
+source /opt/boxen/homebrew/Cellar/git/2.6.2/etc/bash_completion.d/git-completion.bash
+source /opt/boxen/homebrew/Cellar/git/2.6.2/etc/bash_completion.d/git-prompt.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1

@@ -1,0 +1,86 @@
+" Use the comma key as our leader
+let mapleader = ","
+
+
+"== LOAD PLUGINS
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
+
+"== COLORSCHEME
+syntax enable
+color solarized
+set background=dark
+
+"== GENERAL STUFF
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" q to exit from a help file
+autocmd Filetype help nmap <buffer> q :q<CR>
+
+" ESC to go to command line mode and save the current buffer
+imap <esc> <esc>:w<cr>
+
+" Highlight current line
+set cursorline
+
+" Strip all trailing whitespaces in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+
+"== SEARCHING
+" Highlight all search matches
+set hlsearch
+
+" Ignore case when the pattern contains lowercase letters only
+set ignorecase
+set smartcase
+
+" Toggles search highlighting
+nnoremap <leader><space> :set hlsearch!<cr>
+
+
+"== EDITING VIMRC
+" Split edit vimrc
+nmap <leader>vr :vsp $MYVIMRC<cr>
+
+" Source (reload) vimrc
+nmap <leader>so :source $MYVIMRC<cr>
+
+" Split edit vimrc.bundles
+nmap <leader>vb :vsplit ~/.vimrc.bundles<cr>
+
+
+"== LINE NUMBERS
+" Display absolute line numbers
+set number
+set relativenumber
+
+
+"== SPLITS
+" More natural split opening
+set splitbelow
+set splitright
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+
+"== SCROLLING
+" Smooth scrolling
+:map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y>
+:map <C-D> <C-E><C-E><C-E><C-E><C-E>

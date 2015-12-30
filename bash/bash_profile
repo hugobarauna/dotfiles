@@ -88,5 +88,5 @@ export PATH=./bin:./b:$PATH
 
 CDPATH=".:~:~/src"
 
-source ~/.bash_helpers
+source ~/bin/functions
 # source ~/.autocomplete-ssh.sh

@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-sensible'
-
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'elixir-lang/vim-elixir'
 
 call plug#end()

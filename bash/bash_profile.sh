@@ -49,8 +49,8 @@ alias be="bundle exec"
 alias src="cd ~/src"
 
 # Check internet connection
-alias cuol="ping uol.com.br"
-alias cpnet="ping 10.0.1.1"
+alias puol="ping uol.com.br"
+alias ppnet="ping 10.0.1.1"
 
 # My book
 alias lint-my-book="/Users/hugobarauna/projects/tubaina-jarvis/jarvis lint --afc-path=/Users/hugobarauna/projects/meulivro/livro/book/"

@@ -1,5 +1,3 @@
-# vim: filetype=sh
-
 ##
 # Reloads bash configs
 #

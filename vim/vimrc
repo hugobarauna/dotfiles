@@ -13,6 +13,7 @@ syntax enable
 color solarized
 set background=dark
 
+
 "== GENERAL STUFF
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')

@@ -47,6 +47,7 @@ alias be="bundle exec"
 
 # Directories
 alias src="cd ~/src"
+alias dotfiles="cd ~/src/dotfiles"
 
 # Check internet connection
 alias puol="ping uol.com.br"

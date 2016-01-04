@@ -33,6 +33,9 @@ autocmd Filetype help nmap <buffer> q :q<CR>
 " ESC to go to command line mode and save the current buffer
 imap <esc> <esc>:w<cr>
 
+" Store swap files in a central spot
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
 " Highlight current line
 set cursorline
 

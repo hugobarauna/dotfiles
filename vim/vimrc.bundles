@@ -1,8 +1,24 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
+" Common defaults
 Plug 'tpope/vim-sensible'
+
+" Color scheme
+Plug 'altercation/vim-colors-solarized'
+
+" Fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Elixir syntax highlight and related stuff
 Plug 'elixir-lang/vim-elixir'
+
+" Snippets
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
+" Tab completion
+Plug 'ervandew/supertab'
 
 call plug#end()

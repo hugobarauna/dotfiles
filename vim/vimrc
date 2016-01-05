@@ -39,6 +39,9 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Highlight current line
 set cursorline
 
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
 " Strip all trailing whitespaces in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 

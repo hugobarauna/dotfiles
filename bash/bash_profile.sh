@@ -88,6 +88,10 @@ export PATH=./bin:./b:$PATH
 # add ~/bin to PATH
 export PATH=~/bin:$PATH
 
+# add GO related dirs to PATH
+export GOPATH=~/golang
+export PATH=$PATH:$GOPATH/bin
+
 CDPATH=".:~:~/src"
 
 source ~/bin/functions.sh

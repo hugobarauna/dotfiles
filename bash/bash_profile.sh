@@ -1,5 +1,3 @@
-# vim: filetype=sh
-
 source /opt/boxen/env.sh
 
 export GREP_OPTIONS="--color=auto"
@@ -86,6 +84,9 @@ alias jsonget="curl -X GET -H 'Accept: application/json'"
 
 # bundler bin stubs
 export PATH=./bin:./b:$PATH
+
+# add ~/bin to PATH
+export PATH=~/bin:$PATH
 
 CDPATH=".:~:~/src"
 

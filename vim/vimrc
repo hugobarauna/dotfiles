@@ -94,3 +94,6 @@ nnoremap <C-l> <C-w>l
 
 "== Elixir
 autocmd FileType elixir command! Elixir !elixir %
+
+"== Markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown

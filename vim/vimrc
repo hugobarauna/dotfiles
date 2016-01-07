@@ -93,7 +93,11 @@ nnoremap <C-l> <C-w>l
 :map <C-D> <C-E><C-E><C-E><C-E><C-E>
 
 "== Elixir
+" Creates an :Elixir command that runs the current file with Elixir
 autocmd FileType elixir command! Elixir !elixir %
+
+" Map the :Elixir command to <leaader>re in normal mode
+nmap <leader>re :Elixir<cr>
 
 "== Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown

@@ -45,6 +45,8 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Strip all trailing whitespaces in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Select text that was just pasted
+nnoremap <leader>v V`]
 
 "== SEARCHING
 " Highlight all search matches

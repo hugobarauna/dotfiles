@@ -107,3 +107,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "== NERD Tree
 " Maps <leader>n to toggle NERD Tree
 map <leader>n :NERDTreeToggle<cr>
+
+" Closes Vim if the only window left open is a NERD Tree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

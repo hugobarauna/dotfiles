@@ -48,6 +48,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Select text that was just pasted
 nnoremap <leader>v V`]
 
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
 "== SEARCHING
 " Highlight all search matches
 set hlsearch

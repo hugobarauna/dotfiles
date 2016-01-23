@@ -103,3 +103,7 @@ nmap <leader>re :Elixir<cr>
 
 "== Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+"== NERD Tree
+" Maps <leader>n to toggle NERD Tree
+map <leader>n :NERDTreeToggle<cr>

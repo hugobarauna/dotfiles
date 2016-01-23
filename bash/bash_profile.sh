@@ -47,6 +47,9 @@ alias be="bundle exec"
 alias src="cd ~/src"
 alias dotfiles="cd ~/src/dotfiles"
 
+# Files
+alias todolist="vim ~/Desktop/todo-list-personal.md"
+
 # Check internet connection
 alias puol="ping uol.com.br"
 alias ppnet="ping 10.0.1.1"

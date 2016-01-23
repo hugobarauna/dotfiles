@@ -9,6 +9,9 @@ Plug 'altercation/vim-colors-solarized'
 " Fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
 
+" File browsing
+Plug 'scrooloose/nerdtree'
+
 " Elixir syntax highlight and related stuff
 Plug 'elixir-lang/vim-elixir'
 

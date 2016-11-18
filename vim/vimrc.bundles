@@ -15,6 +15,9 @@ Plug 'scrooloose/nerdtree'
 " Elixir syntax highlight and related stuff
 Plug 'elixir-lang/vim-elixir'
 
+" Ruby
+"Plug 'vim-ruby/vim-ruby'
+
 " Snippets
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'

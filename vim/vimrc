@@ -39,6 +39,12 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " Highlight current line
 set cursorline
 
+" Softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
@@ -50,6 +56,7 @@ nnoremap <leader>v V`]
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
+
 
 "== SEARCHING
 " Highlight all search matches

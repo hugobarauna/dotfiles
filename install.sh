@@ -21,7 +21,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.
 
 echo "Installing Git configs"
 rm -f ~/.gitconfig
-rm -f ~/.gitignore
-
 ln -s $PWD/git/gitconfig ~/.gitconfig
+
+rm -f ~/.gitignore
 ln -s $PWD/git/gitignore ~/.gitignore

@@ -18,3 +18,10 @@ ln -s $PWD/vim/vimrc.bundles ~/.vimrc.bundles
 
 rm -f ~/.vim/autoload/plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo "Installing Git configs"
+rm -f ~/.gitconfig
+rm -f ~/.gitignore
+
+ln -s $PWD/git/gitconfig ~/.gitconfig
+ln -s $PWD/git/gitignore ~/.gitignore

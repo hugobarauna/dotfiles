@@ -1,13 +1,11 @@
-source /opt/boxen/env.sh
-
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;33"
 export CLICOLOR="auto"
 
 export EDITOR='vim'
 
-source /opt/boxen/homebrew/Cellar/git/2.6.2/etc/bash_completion.d/git-completion.bash
-source /opt/boxen/homebrew/Cellar/git/2.6.2/etc/bash_completion.d/git-prompt.sh
+source /usr/local/Cellar/git/2.12.2/etc/bash_completion.d/git-completion.bash
+source /usr/local/Cellar/git/2.12.2/etc/bash_completion.d/git-prompt.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1

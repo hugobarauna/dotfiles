@@ -33,7 +33,7 @@
 [help]
     browser = gitscm
 [credential]
-    helper = /opt/boxen/bin/boxen-git-credential
+    helper = osxkeychain
 [hub]
     protocol = https
 [merge]

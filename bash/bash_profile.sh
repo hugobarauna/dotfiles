@@ -4,8 +4,10 @@ export CLICOLOR="auto"
 
 export EDITOR='vim'
 
-source /usr/local/Cellar/git/2.12.2/etc/bash_completion.d/git-completion.bash
-source /usr/local/Cellar/git/2.12.2/etc/bash_completion.d/git-prompt.sh
+completion="$(brew --prefix)/etc/bash_completion"
+if [ -f $completion ]; then
+  . $completion
+fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1

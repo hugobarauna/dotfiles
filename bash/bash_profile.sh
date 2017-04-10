@@ -15,10 +15,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 PS1='\[\033[0;32m\]\w ' # current directory
 PS1+='\[\033[1;36m\]$(__git_ps1 "[%s]")' # git prompt
 PS1+='\n'
-PS1+='\[\033[1;37\]\$ \[\033[0m\]' # regular user or root user
-
-# Hub bash completion: /usr/local/etc/bash_completion.d
-
+#t PS1+='\[\033[1;37\]\$ \[\033[0m\]' # regular user or root user
 
 #------------------#
 #-PERSONAL ALIASES-#

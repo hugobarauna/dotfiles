@@ -60,7 +60,6 @@ alias open-book="(cd /Users/hugobarauna/projects/meulivro && cat .last_version.t
 alias todo="ag '\[TODO (?:[^HB]{2})' ."
 alias meulivro="cd /Users/hugobarauna/projects/meulivro"
 
-## Misc
 # fancy cat command
 alias c="pygmentize -O style=monokai -f console256 -g"
 

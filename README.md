@@ -4,5 +4,5 @@ This repo contains my dotfiles.
 In order to install these dotfiles, go to this projet's root dir and run:
 
 ```bash
-./install.sh
+./script/setup
 ```

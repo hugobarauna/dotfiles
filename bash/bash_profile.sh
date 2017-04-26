@@ -42,7 +42,8 @@ alias be="bundle exec"
 
 # Directories
 alias src="cd ~/src"
-alias dotfiles="cd ~/src/dotfiles"
+alias dotfiles="cd ~/.dotfiles"
+alias brewfile="cd ~/.homebrew-brewfile"
 
 # Files
 alias todolist="vim ~/Desktop/todo-list-personal.md"

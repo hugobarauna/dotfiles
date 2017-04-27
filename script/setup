@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Creating directories"
+mkdir -p $HOME/src
+
 echo "Installing bash configs"
 rm ~/.bash_profile
 ln -s $PWD/bash/bash_profile.sh ~/.bash_profile

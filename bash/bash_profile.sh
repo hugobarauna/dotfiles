@@ -43,7 +43,7 @@ alias be="bundle exec"
 # Directories
 alias src="cd ~/src"
 alias dotfiles="cd ~/.dotfiles"
-alias brewfile="cd ~/.homebrew-brewfile"
+alias brewfile="vim ~/.homebrew-brewfile/Brewfile"
 
 # Files
 alias todolist="vim ~/Desktop/todo-list-personal.md"

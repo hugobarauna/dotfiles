@@ -10,8 +10,8 @@ endif
 
 "== COLORSCHEME
 syntax enable
-color solarized
 set background=dark
+colorscheme solarized
 
 
 "== GENERAL STUFF

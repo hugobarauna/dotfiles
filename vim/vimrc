@@ -104,15 +104,22 @@ nnoremap <C-l> <C-w>l
 :map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y>
 :map <C-D> <C-E><C-E><C-E><C-E><C-E>
 
+"== VIM CHEAT SHEET
+" Open my Vim cheat sheet
+nmap <leader>vcs :vsp ~/src/vim-cheatsheet/cheatsheet.md<cr>
+
 "== Elixir
 " Creates an :Elixir command that runs the current file with Elixir
 autocmd FileType elixir command! Elixir !elixir %
 
+
 " Map the :Elixir command to <leaader>re in normal mode
 nmap <leader>re :Elixir<cr>
 
+
 "== Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 
 "== NERD Tree
 " Maps <leader>n to toggle NERD Tree

@@ -13,7 +13,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 
 " Elixir syntax highlight and related stuff
-Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 
 " Ruby
 "Plug 'vim-ruby/vim-ruby'

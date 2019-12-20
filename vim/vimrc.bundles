@@ -12,10 +12,14 @@ Plug 'ctrlpvim/ctrlp.vim'
 " File browsing
 Plug 'scrooloose/nerdtree'
 
+" Comment source code
+Plug 'tpope/vim-commentary'
+
 " Elixir syntax highlight and related stuff
 Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
-Plug 'mhinz/vim-mix-format'
+"Plug 'slashmili/alchemist.vim'
+"Plug 'mhinz/vim-mix-format'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Ruby
 "Plug 'vim-ruby/vim-ruby'
@@ -27,6 +31,6 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Tab completion
-Plug 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 
 call plug#end()

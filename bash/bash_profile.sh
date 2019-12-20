@@ -79,4 +79,4 @@ source ~/bin/functions.sh
 # source ~/.autocomplete-ssh.sh
 
 # eval "$(rbenv init -)"
-# eval "$(nodenv init -)"
+eval "$(nodenv init -)"

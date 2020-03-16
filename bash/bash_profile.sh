@@ -47,6 +47,10 @@ alias gdc="git diff --cached"
 # alias tlt="tail -f log/test.log"
 # alias be="bundle exec"
 
+# Elixir
+# Enables IEx shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # Directories
 alias src="cd ~/src"
 alias dotfiles="cd ~/.dotfiles"

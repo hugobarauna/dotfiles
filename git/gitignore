@@ -16,3 +16,15 @@ erl_crash.dump
 .elixir_ls/
 
 .ackrc
+
+todo.md
+
+.vscode/
+
+# File that tells icloud not to sync a dir
+# this is needed to fix a problem I was having with "multiple versions"
+# of beam files.
+# This solution comes from https://medium.com/@po_thiago/beam-file-exists-but-it-defines-a-module-named-f9c66d9f3f1c
+.nosync
+
+ignore/

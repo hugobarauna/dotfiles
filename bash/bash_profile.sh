@@ -48,8 +48,10 @@ alias gdc="git diff --cached"
 # alias be="bundle exec"
 
 # Elixir
-# Enables IEx shell history
+# Enable IEx shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
+# Enable Erlang docs
+export KERL_BUILD_DOCS=yes
 
 # Directories
 alias src="cd ~/src"

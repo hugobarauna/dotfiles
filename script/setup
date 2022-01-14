@@ -28,3 +28,7 @@ ln -s $PWD/git/gitconfig ~/.gitconfig
 
 rm -f ~/.gitignore
 ln -s $PWD/git/gitignore ~/.gitignore
+
+echo "Installing IEx configs"
+rm -f ~/.iex.exs
+ln -s $PWD/elixir/iex.exs ~/.iex.exs

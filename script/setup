@@ -1,16 +1,16 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo "Creating home directories"
 ln -s $HOME/Documents/src $HOME/src
 
-echo "Installing bash configs"
-rm ~/.bash_profile
-ln -s $PWD/bash/bash_profile.sh ~/.bash_profile
+echo "Installing oh my zsh configs"
+rm ~/.zshrc
+ln -s $PWD/zsh/zshrc ~/.zshrc
 
 echo "Installing bin"
 rm -rf ~/bin
 mkdir ~/bin
-ln -s $PWD/bash/functions.sh ~/bin/functions.sh
+ln -s $PWD/zsh/functions.zsh ~/bin/functions.zsh
 
 echo "Installing Vim configs"
 rm ~/.vimrc

@@ -21,9 +21,6 @@
 #    l = "!. ~/.githelpers && pretty_git_log"
 [github]
     user = hugobarauna
-[codebase]
-    username = hugobarauna
-    domain = plataformatec.codebasehq.com
 [clean]
     requireForce = false
 [push]

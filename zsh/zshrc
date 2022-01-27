@@ -117,4 +117,7 @@ alias src="cd ~/src"
 alias dotfiles="cd ~/.dotfiles"
 alias brewfile="cd ~/.homebrew-brewfile && vim ~/.homebrew-brewfile/Brewfile"
 
+# Livebook
+alias lb="livebook server --open --root-path ~/src/my-livebooks"
+
 source ~/bin/functions.zsh

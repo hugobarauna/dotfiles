@@ -117,7 +117,8 @@ alias src="cd ~/src"
 alias dotfiles="cd ~/.dotfiles"
 alias brewfile="cd ~/.homebrew-brewfile && vim ~/.homebrew-brewfile/Brewfile"
 
-# Livebook
+# Local applications
 alias lb="livebook server --open --root-path ~/src/my-livebooks"
+alias er="cd ~/src/elixir_radar_utils"
 
 source ~/bin/functions.zsh

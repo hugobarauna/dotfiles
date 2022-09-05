@@ -1,6 +1,6 @@
 [user]
     name = Hugo Baraúna
-    email = hugo.barauna@plataformatec.com.br
+    email = hugo.barauna@gmail.com
 [color]
     status = auto
     diff = auto
@@ -25,6 +25,7 @@
     requireForce = false
 [push]
     default = simple
+	autoSetupRemote = true
 [browser "gitscm"]
     cmd = /bin/sh -c 'open http://git-scm.com/docs/$(basename $1 .html)' --
 [help]

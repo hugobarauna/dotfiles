@@ -25,10 +25,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'vim-ruby/vim-ruby'
 
 " Snippets
-Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
+" Plug 'marcweber/vim-addon-mw-utils'
+" Plug 'tomtom/tlib_vim'
+" Plug 'garbas/vim-snipmate'
+" Plug 'honza/vim-snippets'
 
 " Tab completion
 "Plug 'ervandew/supertab'

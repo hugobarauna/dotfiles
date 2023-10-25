@@ -2,6 +2,7 @@
 *.swp
 
 .node-version
+.tool-versions
 
 # Elixir
 /_build

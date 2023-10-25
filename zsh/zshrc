@@ -123,7 +123,7 @@ alias gdc="git diff --cached"
 # Directories
 alias src="cd ~/src"
 alias dotfiles="cd ~/.dotfiles"
-alias brewfile="cd ~/.homebrew-brewfile && vim ~/.homebrew-brewfile/Brewfile"
+alias brewfile="cd ~/.homebrew-brewfile"
 
 # Local applications
 alias lb="livebook server ~/src/my-livebooks"
@@ -138,3 +138,5 @@ if [ -f '/Users/hugobarauna/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/hugobarauna/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hugobarauna/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="/opt/homebrew/bin:$PATH"

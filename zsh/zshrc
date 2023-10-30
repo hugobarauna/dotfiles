@@ -75,6 +75,9 @@ ZSH_THEME="robbyrussell"
 #   asdf
 # )
 
+# This is needed for shell completion, added because of Heroku CLI
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

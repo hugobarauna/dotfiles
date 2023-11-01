@@ -129,9 +129,8 @@ alias dotfiles="cd ~/.dotfiles"
 alias brewfile="cd ~/.homebrew-brewfile"
 
 # Local applications
-alias lb="livebook server ~/src/my-livebooks"
 alias lbupdate="git pull && mix deps.get --only prod"
-alias lbserver="MIX_ENV=prod LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps LIVEBOOK_TOKEN_ENABLED=false LIVEBOOK_TEAMS_URL=https://teams.livebook.dev ERL_AFLAGS='-proto_dist inet6_tcp' LIVEBOOK_DISTRIBUTION=hb-local-livebook mix phx.server"
+alias lbserver="MIX_ENV=prod LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps LIVEBOOK_TOKEN_ENABLED=false ERL_AFLAGS='-proto_dist inet6_tcp' LIVEBOOK_DISTRIBUTION=hb-local-livebook mix phx.server"
 alias er="cd ~/src/elixir_radar_utils"
 
 source ~/bin/functions.zsh

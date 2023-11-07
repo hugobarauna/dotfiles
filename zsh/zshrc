@@ -144,3 +144,4 @@ if [ -f '/Users/hugobarauna/Downloads/google-cloud-sdk/completion.zsh.inc' ]; th
 export PATH="/opt/homebrew/bin:$PATH"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+. "$HOME/.cargo/env"

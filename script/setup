@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-echo "Creating home directories"
-rm $HOME/src
-ln -s $HOME/Documents/src $HOME/src
-
 echo "Installing oh my zsh configs"
 rm ~/.zshrc
 ln -s $PWD/zsh/zshrc ~/.zshrc

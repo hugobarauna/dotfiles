@@ -7,8 +7,9 @@ ln -s $PWD/zsh/zshrc ~/.zshrc
 echo "Installing bin"
 rm -rf ~/bin
 mkdir ~/bin
+
+cp -R $PWD/bin/* ~/bin
 ln -s $PWD/zsh/functions.zsh ~/bin/functions.zsh
-ln -s $PWD/bin/exformatmd.exs ~/bin/exformatdmd.exs
 
 # echo "Installing Vim configs"
 # rm ~/.vimrc

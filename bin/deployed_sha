@@ -1,0 +1,23 @@
+#!/bin/sh
+set -euo pipefail
+
+print_usage_and_exit() {
+  echo "Usage: $0 <environment>"
+  exit 1
+}
+
+if [ $# -lt 1 ]; then
+  print_usage_and_exit
+fi
+
+config_file="fly/$1.toml"
+
+if [ ! -f "$config_file" ]; then
+  echo "Unknown environment: $1"
+  print_usage_and_exit
+fi
+
+fly ssh console \
+  --config $config_file \
+  --pty \
+  --command="/app/bin/teams rpc 'Application.spec(:teams, :vsn) |> List.to_string |> String.split(\"+\") |> Enum.at(1) |> IO.inspect(label: \"\nGit SHA deployed\")'"

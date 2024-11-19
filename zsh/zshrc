@@ -153,3 +153,14 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # For Jumping to HEEx function definitions with PhoenixLiveReload to work
 export PLUG_EDITOR="vscode://file/__FILE__:__LINE__"
+
+# Set ELIXIR_ERL_OPTIONS inside Livebook src dir. This is needed before the next OTP version
+function set_env_on_cd() {
+  if [[ "$PWD" == "/Users/hugobarauna/src/livebook" ]]; then
+    export ELIXIR_ERL_OPTIONS="-epmd_module Elixir.Livebook.EPMD"
+  else
+    unset ELIXIR_ERL_OPTIONS
+  fi
+}
+autoload -U add-zsh-hook
+add-zsh-hook chpwd set_env_on_cd

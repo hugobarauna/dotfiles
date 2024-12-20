@@ -122,6 +122,7 @@ alias gci="git commit"
 alias gdf="git diff"
 alias gdfw="git diff --word-diff"
 alias gdc="git diff --cached"
+alias lg="lazygit"
 
 # Directories
 alias src="cd ~/src"

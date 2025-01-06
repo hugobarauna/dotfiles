@@ -1,7 +1,9 @@
 #!/bin/zsh
 
 echo "Installing oh my zsh configs"
+rm ~/.zprofile
 rm ~/.zshrc
+ln -s $PWD/zsh/zprofile ~/.zprofile
 ln -s $PWD/zsh/zshrc ~/.zshrc
 
 echo "Installing bin"

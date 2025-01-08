@@ -2,12 +2,19 @@
 autoload -Uz compinit
 compinit
 
+# Activate zsh-completions from brew package
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Source Git's bash completion script for __git_ps1
 source "$(brew --prefix git)/etc/bash_completion.d/git-prompt.sh"
 
 # Enable prompt substitution
 setopt PROMPT_SUBST
-
 
 # PS1
 # Function to count uncommitted changes (returns empty if none)
@@ -88,4 +95,3 @@ export PATH="/opt/homebrew/bin:$PATH"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 . "$HOME/.cargo/env"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
-

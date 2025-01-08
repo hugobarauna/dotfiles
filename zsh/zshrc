@@ -8,6 +8,8 @@ source "$(brew --prefix git)/etc/bash_completion.d/git-prompt.sh"
 # Enable prompt substitution
 setopt PROMPT_SUBST
 
+
+# PS1
 # Function to count uncommitted changes (returns empty if none)
 git_dirty_count() {
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
@@ -17,18 +19,18 @@ git_dirty_count() {
 }
 
 # Set prompt with Git branch and uncommitted changes count
-PS1='%F{green}%~ %F{yellow}$(__git_ps1 "git:(%s)$(git_dirty_count)")%f
+PS1='%F{red}%~ %F{green}$(__git_ps1 "git:(%s)$(git_dirty_count)")%f
 '
+
+# ELIXIR CONFIGS
+export ERL_AFLAGS="-kernel shell_history enabled"
+# Enable compiling docs into Erlang
+export KERL_BUILD_DOCS=yes
 
 export ELIXIR_EDITOR="code --goto __FILE__:__LINE__"
 
 # For Jumping to HEEx function definitions with PhoenixLiveReload to work
 export PLUG_EDITOR="vscode://file/__FILE__:__LINE__"
-
-export ERL_AFLAGS="-kernel shell_history enabled"
-
-# Enable compiling docs into Erlang
-export KERL_BUILD_DOCS=yes
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -39,8 +41,9 @@ export KERL_BUILD_DOCS=yes
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# ALIASES
 # Git
-alias g="git"
+alias gp="git pull"
 alias gco="git checkout"
 alias gst="git status"
 alias gad="git add"
@@ -55,15 +58,23 @@ alias src="cd ~/src"
 alias dotfiles="cd ~/.dotfiles"
 alias brewfile="cd ~/.homebrew-brewfile"
 
-# Local applications
+# Livebook
 alias lbupdate="git pull && mix deps.get --only prod"
-alias lbserver="MIX_ENV=prod LIVEBOOK_LOG_LEVEL=debug LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps LIVEBOOK_TOKEN_ENABLED=false ELIXIR_ERL_OPTIONS='-epmd_module Elixir.Livebook.EPMD' mix phx.server"
+alias lbserver="MIX_ENV=prod LIVEBOOK_LOG_LEVEL=debug LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps LIVEBOOK_TOKEN_ENABLED=false mix phx.server"
 alias lbserver_with_fly_configs="ERL_AFLAGS='-proto_dist inet6_tcp' lbserver"
-alias lbdev="ELIXIR_ERL_OPTIONS=\"-epmd_module Elixir.Livebook.EPMD\" mix phx.server"
+alias lb_with_local_teams="LIVEBOOK_TEAMS_URL=http://localhost:4100 \
+LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/test/prod-livebook \
+LIVEBOOK_TOKEN_ENABLED=false \
+LIVEBOOK_LOG_LEVEL=debug \
+mix phx.server"
+
+# Elixir Radar
 alias er="cd ~/src/elixir_radar_utils"
 
-source ~/bin/functions.zsh
+# Misc
+alias gt="ghostty"
 
+source ~/bin/functions.zsh
 export PATH="$HOME/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.

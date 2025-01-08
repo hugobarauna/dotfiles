@@ -78,6 +78,9 @@ mix phx.server"
 # Elixir Radar
 alias er="cd ~/src/elixir_radar_utils"
 
+# Elixir
+alias mps="mix phx.server"
+
 # Misc
 alias gt="ghostty"
 

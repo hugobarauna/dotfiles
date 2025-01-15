@@ -37,7 +37,8 @@ export KERL_BUILD_DOCS=yes
 export ELIXIR_EDITOR="code --goto __FILE__:__LINE__"
 
 # For Jumping to HEEx function definitions with PhoenixLiveReload to work
-export PLUG_EDITOR="vscode://file/__FILE__:__LINE__"
+# export PLUG_EDITOR="vscode://file/__FILE__:__LINE__"
+export PLUG_EDITOR="zed://file/__FILE__:__LINE__"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

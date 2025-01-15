@@ -1,4 +1,15 @@
 #!/bin/sh
+print_help() {
+ echo "This script starts a Phoenix server and a Livebook attached to it."
+ echo
+ echo "Options:"
+ echo "  -h    Show this help message"
+}
+
+if [ "$1" = "-h" ]; then
+ print_help
+ exit 0
+fi
 
 handle_interrupted() {
 # Kill all the background processes started by this script.

@@ -57,8 +57,9 @@ alias gst="git status"
 alias gad="git add"
 alias gci="git commit"
 alias gdf="git diff"
-alias gdfw="git diff --word-diff"
+alias gdw="git diff --word-diff"
 alias gdc="git diff --cached"
+alias gtl="git timelog"
 alias lg="lazygit"
 
 # Directories

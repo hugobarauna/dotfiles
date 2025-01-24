@@ -36,8 +36,8 @@ function lb_app_server() {
   LIVEBOOK_IFRAME_PORT=4201 \\
   LIVEBOOK_TEAMS_URL=http://localhost:4100 \\
   LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/test/prod-app-server \\
-  LIVEBOOK_TOKEN_ENABLED=false \\
   LIVEBOOK_LOG_LEVEL=debug \\
+  MIX_ENV=prod \\
   mix phx.server"
 
   # Echo the command

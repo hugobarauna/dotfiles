@@ -8,7 +8,13 @@ function reload () {
 ##
 # Utility to make it easier to run a Livebook app server for dev purposes
 #
+# Usage: lb_app_server [env]
+# env: Either 'prod' or 'dev'. Defaults to 'prod' if not specified
+#
+
 function lb_app_server() {
+  # Default to prod if no environment is specified
+  local env=${1:-prod}
   # Get the string that should be copied from the "App server setup" screen inside Livebook
   input_string=$(pbpaste 2>/dev/null || xclip -o 2>/dev/null || xsel --clipboard --output 2>/dev/null)
 
@@ -26,6 +32,14 @@ function lb_app_server() {
     return 1
   fi
 
+  # Set environment-specific variables
+  local env_vars=""
+  if [[ "$env" == "dev" ]]; then
+    env_vars="MIX_ENV=dev LIVEBOOK_TOKEN_ENABLED=false"
+  else
+    env_vars="MIX_ENV=prod"
+  fi
+
   # Define the command
   command="LIVEBOOK_AGENT_NAME=default \\
   LIVEBOOK_TEAMS_KEY=$livebook_teams_key \\
@@ -37,7 +51,7 @@ function lb_app_server() {
   LIVEBOOK_TEAMS_URL=http://localhost:4100 \\
   LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/test/prod-app-server \\
   LIVEBOOK_LOG_LEVEL=debug \\
-  MIX_ENV=prod \\
+  $env_vars \\
   mix phx.server"
 
   # Echo the command

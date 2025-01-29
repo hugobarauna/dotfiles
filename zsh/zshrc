@@ -64,7 +64,7 @@ alias lg="lazygit"
 
 # Directories
 alias src="cd ~/src"
-alias dotfiles="cd ~/.dotfiles"
+alias dotfiles="zed ~/.dotfiles"
 alias brewfile="cd ~/.homebrew-brewfile"
 
 # Livebook

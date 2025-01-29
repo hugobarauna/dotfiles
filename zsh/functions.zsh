@@ -9,12 +9,12 @@ function reload () {
 # Utility to make it easier to run a Livebook app server for dev purposes
 #
 # Usage: lb_app_server [env]
-# env: Either 'prod' or 'dev'. Defaults to 'prod' if not specified
+# env: Either 'prod' or 'dev'. Defaults to 'dev' if not specified
 #
 
 function lb_app_server() {
   # Default to prod if no environment is specified
-  local env=${1:-prod}
+  local env=${1:-dev}
   # Get the string that should be copied from the "App server setup" screen inside Livebook
   input_string=$(pbpaste 2>/dev/null || xclip -o 2>/dev/null || xsel --clipboard --output 2>/dev/null)
 

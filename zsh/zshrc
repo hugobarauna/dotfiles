@@ -64,10 +64,13 @@ alias lg="lazygit"
 
 # Directories
 alias src="cd ~/src"
+alias dt="cd ~/.dotfiles"
 alias dotfiles="zed ~/.dotfiles"
 alias brewfile="cd ~/.homebrew-brewfile"
 
 # Livebook
+alias lb="cd ~/src/livebook"
+alias tm="cd ~/src/teams"
 alias lbupdate="git pull && mix deps.get --only prod"
 alias lbserver="MIX_ENV=prod LIVEBOOK_LOG_LEVEL=debug LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps LIVEBOOK_TOKEN_ENABLED=false mix phx.server"
 alias lbserver_with_fly_configs="ERL_AFLAGS='-proto_dist inet6_tcp' lbserver"

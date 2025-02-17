@@ -30,3 +30,5 @@ todo.md
 .nosync
 
 ignore/
+
+.aider*

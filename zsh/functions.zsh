@@ -45,9 +45,9 @@ function lb_app_server() {
   LIVEBOOK_TEAMS_KEY=$livebook_teams_key \\
   LIVEBOOK_TEAMS_AUTH=$livebook_teams_auth \\
   LIVEBOOK_SECRET_KEY_BASE=ZQ0zaHN0OsioIhSEZnCVDBvd1MKl89R_tbISupofY7imiZLhInKT27uw12H-yuC8 \\
-  LIVEBOOK_COOKIE=c_OD6yogAKqa5xCfkeYirxd4trWl52ZCAMuxcLifhjd1hp8P9ksx5r \\
-  LIVEBOOK_PORT=4200 \\
-  LIVEBOOK_IFRAME_PORT=4201 \\
+  LIVEBOOK_COOKIE=secret \\
+  LIVEBOOK_PORT=4500 \\
+  LIVEBOOK_IFRAME_PORT=4501 \\
   LIVEBOOK_TEAMS_URL=http://localhost:4100 \\
   LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/test/prod-app-server \\
   LIVEBOOK_LOG_LEVEL=debug \\

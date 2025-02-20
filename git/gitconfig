@@ -17,6 +17,12 @@
     dc = diff --cached
     timelog = log --pretty=format:'%Cred%h%Creset - %C(yellow)%ae%Creset - %Cgreen%cd%Creset - %s%Creset' --abbrev-commit --date=iso
     tree = log --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%ae%Creset - %s%Creset - %Cgreen%cd%Creset'
+    # `git log` with patches shown with difftastic.
+    dl = -c diff.external=difft log -p --ext-diff
+    # Show the most recent commit with difftastic.
+    ds = -c diff.external=difft show --ext-diff
+    # `git diff` with difftastic.
+    dft = -c diff.external=difft diff
 #    hp = "!. ~/.githelpers && show_git_head"
 #    l = "!. ~/.githelpers && pretty_git_log"
 [github]

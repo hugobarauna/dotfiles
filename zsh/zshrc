@@ -104,7 +104,10 @@ if [ -f '/Users/hugobarauna/Downloads/google-cloud-sdk/completion.zsh.inc' ]; th
 
 export PATH="/opt/homebrew/bin:$PATH"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh
+export ASDF_DATA_DIR="/Users/hugobarauna/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
+
 . "$HOME/.cargo/env"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 

@@ -76,8 +76,8 @@ alias nb="cd ~/src/notebooks"
 alias lb="cd ~/src/livebook"
 alias tm="cd ~/src/teams"
 alias lbupdate="git pull && mix deps.get --only prod"
-alias lbserver="MIX_ENV=prod LIVEBOOK_LOG_LEVEL=debug LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps LIVEBOOK_TOKEN_ENABLED=false mix phx.server"
-alias lbserver_with_fly_configs="ERL_AFLAGS='-proto_dist inet6_tcp' lbserver"
+alias lbserver="MIX_ENV=prod LIVEBOOK_LOG_LEVEL=debug LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps LIVEBOOK_TOKEN_ENABLED=false LIVEBOOK_NODE=mylb@127.0.0.1 LIVEBOOK_COOKIE=secret mix phx.server"
+alias lbserver_with_fly_configs="ERL_AFLAGS='-proto_dist inet6_tcp' MIX_ENV=prod LIVEBOOK_LOG_LEVEL=debug LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data LIVEBOOK_TOKEN_ENABLED=false mix phx.server"
 alias lb_with_local_teams="LIVEBOOK_TEAMS_URL=http://localhost:4100 \
 LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/test/prod-livebook \
 LIVEBOOK_TOKEN_ENABLED=false \

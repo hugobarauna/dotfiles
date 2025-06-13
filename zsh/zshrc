@@ -127,3 +127,5 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 # Livebook
 export LIVEBOOK_NODE="livebook@127.0.0.1"
 export LIVEBOOK_COOKIE="secret"
+
+alias claude="/Users/hugobarauna/.claude/local/claude"

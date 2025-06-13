@@ -32,3 +32,5 @@ todo.md
 ignore/
 
 .aider*
+
+.claude

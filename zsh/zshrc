@@ -84,7 +84,7 @@ alias lbserver="\
   mix phx.server"
 alias lbserver_with_fly_configs="\
   ERL_AFLAGS='-proto_dist inet6_tcp' \
-  LIVEBOOK_NODE=liveboo-hugo-localk@::1 \
+  LIVEBOOK_NODE=livebook@::1 \
   MIX_ENV=prod \
   LIVEBOOK_LOG_LEVEL=debug \
   LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data \

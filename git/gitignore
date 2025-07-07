@@ -35,5 +35,8 @@ ignore/
 
 .claude
 CLAUDE.md
+AGENT.md
 .rules/*
 rules/*
+
+.zed/

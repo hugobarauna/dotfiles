@@ -105,6 +105,7 @@ alias er="cd ~/src/elixir_radar_utils"
 
 # Elixir
 alias mps="mix phx.server"
+alias mdg="mix deps.get"
 
 # Misc
 alias gt="ghostty"

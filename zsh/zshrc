@@ -97,6 +97,9 @@ alias lb_with_local_teams="\
   LIVEBOOK_LOG_LEVEL=debug \
   mix phx.server"
 
+# Tidewave
+alias ts="cd ~/src/ts"
+
 # Elixir Radar
 alias er="cd ~/src/elixir_radar_utils"
 
@@ -131,3 +134,10 @@ export LIVEBOOK_COOKIE="secret"
 alias claude="/Users/hugobarauna/.claude/local/claude"
 
 eval "$(_MARIMO_COMPLETE=zsh_source marimo)"
+
+# bun completions
+[ -s "/Users/hugobarauna/.oh-my-zsh/completions/_bun" ] && source "/Users/hugobarauna/.oh-my-zsh/completions/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

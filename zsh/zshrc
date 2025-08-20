@@ -109,6 +109,7 @@ alias mdg="mix deps.get"
 
 # Misc
 alias gt="ghostty"
+alias ccc="npx ccusage@latest" # claude code costs
 
 source ~/bin/functions.zsh
 export PATH="$HOME/bin:$PATH"

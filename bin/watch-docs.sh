@@ -23,7 +23,7 @@ echo "Step 2 & 3: Starting file watcher and browser-sync..."
 fswatch mix.exs docs/ | xargs -I {} mix docs &
 
 # Start browser-sync in background
-browser-sync start --server doc --files "doc/*.html" &
+browser-sync start --server doc --files "doc/*" &
 
 echo "Docs watcher is running. Press Ctrl+C to stop all processes."
 

@@ -135,7 +135,6 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export LIVEBOOK_NODE="livebook@127.0.0.1"
 export LIVEBOOK_COOKIE="secret"
 
-alias claude="/Users/hugobarauna/.claude/local/claude"
 
 eval "$(_MARIMO_COMPLETE=zsh_source marimo)"
 
@@ -150,3 +149,10 @@ eval "$(direnv hook zsh)"
 
 # opencode
 export PATH=/Users/hugobarauna/.opencode/bin:$PATH
+
+# for claude code native
+export PATH=/Users/hugobarauna/.local/bin:$PATH
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh --disable-up-arrow)"

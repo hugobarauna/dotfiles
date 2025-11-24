@@ -73,6 +73,7 @@ alias dt="cd ~/.dotfiles"
 alias dotfiles="zed ~/.dotfiles"
 alias brewfile="cd ~/.homebrew-brewfile"
 alias nb="cd ~/src/notebooks"
+alias re="cd ~/src/redar"
 
 # Livebook
 alias lb="cd ~/src/livebook"

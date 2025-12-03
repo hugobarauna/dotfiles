@@ -8,6 +8,16 @@
 [core]
     excludesfile = ~/.gitignore
     editor = vim
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = interactive
+
+[delta "interactive"]
+    navigate = false
+
 [alias]
     st = status -sb
     ci = commit

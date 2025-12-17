@@ -34,7 +34,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # Enable compiling docs into Erlang
 export KERL_BUILD_DOCS=yes
 
-export ELIXIR_EDITOR="code --goto __FILE__:__LINE__"
+export ELIXIR_EDITOR="zed://file/__FILE__:__LINE__"
 
 export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(( $(sysctl -n hw.physicalcpu) / 2 ))
 

@@ -52,7 +52,7 @@ fi
 if [ "$should_notify" = true ]; then
   echo "$(date): Sending notification: $message" >> /tmp/claude-hook-debug.log
   terminal-notifier -title "Claude Code" -message "$message" \
-    -sender com.anthropic.claudefordesktop \
-    -group claude-code
+    -group claude-code \
+    -activate com.mitchellh.ghostty
   echo "$(date): Notification sent, exit code: $?" >> /tmp/claude-hook-debug.log
 fi

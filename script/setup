@@ -33,3 +33,8 @@ ln -s $PWD/git/gitignore ~/.gitignore
 echo "Installing IEx configs"
 rm -f ~/.iex.exs
 ln -s $PWD/elixir/iex.exs ~/.iex.exs
+
+echo "Installing Ghostty configs"
+mkdir -p ~/.config/ghostty
+rm -f ~/.config/ghostty/config
+ln -s $PWD/ghostty/config ~/.config/ghostty/config

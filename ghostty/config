@@ -1,0 +1,4 @@
+font-size = 16
+window-padding-x = 16
+keybind = shift+enter=text:\n
+desktop-notifications = true

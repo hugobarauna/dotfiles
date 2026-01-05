@@ -54,6 +54,9 @@ function lb_app_server() {
   $env_vars \\
   mix phx.server"
 
+  # Set terminal title
+  print -Pn '\e]0;Livebook (app server): %1~\a'
+
   # Echo the command
   echo "Running this command:"
   echo "$command"

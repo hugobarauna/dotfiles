@@ -78,27 +78,35 @@ alias re="cd ~/src/redar"
 # Livebook
 alias lb="cd ~/src/livebook"
 alias tm="cd ~/src/teams"
-alias lbserver="\
+function lbserver() {
+  print -Pn '\e]0;Livebook Server: %1~\a'
   MIX_ENV=prod \
   LIVEBOOK_LOG_LEVEL=debug \
   LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data \
   LIVEBOOK_APPS_PATH=/Users/hugobarauna/src/tmp/notebooks/apps \
   LIVEBOOK_TOKEN_ENABLED=false \
-  mix phx.server"
-alias lbserver_with_fly_configs="\
+  mix phx.server "$@"
+}
+
+function lbserver_with_fly_configs() {
+  print -Pn '\e]0;Livebook Server (fly config): %1~\a'
   ERL_AFLAGS='-proto_dist inet6_tcp' \
   LIVEBOOK_NODE=livebook@::1 \
   MIX_ENV=prod \
   LIVEBOOK_LOG_LEVEL=debug \
   LIVEBOOK_DATA_PATH=~/src/tmp/livebook_data \
   LIVEBOOK_TOKEN_ENABLED=false \
-  mix phx.server"
-alias lb_with_local_teams="\
+  mix phx.server "$@"
+}
+
+function lb_with_local_teams() {
+  print -Pn '\e]0;Livebook (local teams): %1~\a'
   LIVEBOOK_TEAMS_URL=http://localhost:4100 \
   LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/test/prod-livebook \
   LIVEBOOK_TOKEN_ENABLED=false \
   LIVEBOOK_LOG_LEVEL=debug \
-  mix phx.server"
+  mix phx.server "$@"
+}
 
 # Tidewave
 alias ts="cd ~/src/ts"
@@ -107,8 +115,15 @@ alias ts="cd ~/src/ts"
 alias er="cd ~/src/elixir_radar_utils"
 
 # Elixir
-alias mps="mix phx.server"
-alias pmps="MIX_ENV=prod mix phx.server"
+function mps() {
+  print -Pn '\e]0;Phoenix: %1~\a'
+  mix phx.server "$@"
+}
+
+function pmps() {
+  print -Pn '\e]0;Phoenix (prod): %1~\a'
+  MIX_ENV=prod mix phx.server "$@"
+}
 alias mdg="mix deps.get"
 
 # Misc

@@ -1,4 +1,10 @@
 font-size = 16
 window-padding-x = 16
 keybind = shift+enter=text:\n
-desktop-notifications = true
+shell-integration-features = ssh-env
+clipboard-trim-trailing-spaces = true
+mouse-hide-while-typing = true
+window-save-state = always
+focus-follows-mouse = true
+notify-on-command-finish = unfocused
+notify-on-command-finish-after = 10s

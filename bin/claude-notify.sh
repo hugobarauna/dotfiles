@@ -1,12 +1,8 @@
 #!/bin/bash
 
-# Read JSON input from stdin
 input=$(cat)
-
-# Parse hook event name
 hook_event=$(echo "$input" | grep -o '"hook_event_name":"[^"]*"' | cut -d'"' -f4)
 
-# Debug: log to file
 echo "$(date): Hook called, event=$hook_event, ENTRYPOINT=$CLAUDE_CODE_ENTRYPOINT" >> /tmp/claude-hook-debug.log
 
 # Only notify if running via CLI (not ACP like Zed/Tidewave)
@@ -14,45 +10,38 @@ if [ "$CLAUDE_CODE_ENTRYPOINT" != "cli" ]; then
   exit 0
 fi
 
-# Check if Ghostty is the frontmost application
-frontmost_app=$(osascript -e 'tell application "System Events" to get name of first application process whose frontmost is true' 2>/dev/null)
-
-echo "$(date): Frontmost app: $frontmost_app" >> /tmp/claude-hook-debug.log
-
-# Set message based on hook event
 case "$hook_event" in
-  "Stop")
-    message="Task completed"
-    ;;
-  *)
-    message="Ready for input"
-    ;;
+  "Stop") message="Task completed" ;;
+  *) message="Ready for input" ;;
 esac
 
-# Check if we should notify
-should_notify=true
+# Use Ghostty's native AppleScript for precise tab detection
+claude_tab_status=$(osascript 2>/dev/null <<'APPLESCRIPT'
+tell application "System Events"
+    if not (exists process "ghostty") then return "no-ghostty"
+    if not (frontmost of process "ghostty") then return "not-focused"
+end tell
+tell application "Ghostty"
+    try
+        set tabName to name of selected tab of front window
+        if tabName contains "✳" or tabName contains "claude" then
+            return "claude-focused"
+        end if
+    end try
+end tell
+return "other-tab"
+APPLESCRIPT
+)
 
-if [ "$frontmost_app" = "ghostty" ]; then
-  # Ghostty is focused - check if the Claude tab is active
-  window_title=$(osascript -e 'tell application "System Events" to tell process "ghostty" to get name of window 1' 2>/dev/null)
-  echo "$(date): Ghostty window title: $window_title" >> /tmp/claude-hook-debug.log
+echo "$(date): Tab status: $claude_tab_status" >> /tmp/claude-hook-debug.log
 
-  # Claude Code tabs have ✳ prefix, or may contain "claude" in title
-  # Convert to lowercase for case-insensitive check
-  title_lower=$(echo "$window_title" | tr '[:upper:]' '[:lower:]')
-
-  if [[ "$window_title" == *"✳"* ]] || [[ "$title_lower" == *"claude"* ]]; then
-    should_notify=false
-    echo "$(date): Claude tab focused, skipping notification" >> /tmp/claude-hook-debug.log
-  else
-    echo "$(date): Ghostty focused but different tab active" >> /tmp/claude-hook-debug.log
-  fi
+if [ "$claude_tab_status" = "claude-focused" ]; then
+  echo "$(date): Claude tab focused, skipping notification" >> /tmp/claude-hook-debug.log
+  exit 0
 fi
 
-if [ "$should_notify" = true ]; then
-  echo "$(date): Sending notification: $message" >> /tmp/claude-hook-debug.log
-  terminal-notifier -title "Claude Code" -message "$message" \
-    -group claude-code \
-    -activate com.mitchellh.ghostty
-  echo "$(date): Notification sent, exit code: $?" >> /tmp/claude-hook-debug.log
-fi
+echo "$(date): Sending notification: $message" >> /tmp/claude-hook-debug.log
+terminal-notifier -title "Claude Code" -message "$message" \
+  -group claude-code \
+  -execute "$HOME/bin/claude-focus-tab.sh '${PWD//\'/\'\\\'\'}'"
+echo "$(date): Notification sent, exit code: $?" >> /tmp/claude-hook-debug.log

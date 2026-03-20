@@ -49,7 +49,7 @@ function lb_app_server() {
   LIVEBOOK_PORT=4500 \\
   LIVEBOOK_IFRAME_PORT=4501 \\
   LIVEBOOK_TEAMS_URL=http://localhost:4100 \\
-  LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/test/prod-app-server \\
+  LIVEBOOK_DATA_PATH=/Users/hugobarauna/src/tmp/livebook_data_paths/lb-app-server \\
   LIVEBOOK_LOG_LEVEL=debug \\
   $env_vars \\
   mix phx.server"
